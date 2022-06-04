@@ -1,10 +1,10 @@
 <?php
 
-namespace Pys\Lottie;
+namespace ADPC\Lottie;
 
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\View\ComponentAttributeBag;
-use Pys\Lottie\Facades\Lottie;
+use ADPC\Lottie\Facades\Lottie;
 
 class ComponentRenderer implements Htmlable
 {

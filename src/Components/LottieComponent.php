@@ -1,9 +1,9 @@
 <?php
 
-namespace Pys\Lottie\Components;
+namespace ADPC\Lottie\Components;
 
 use Illuminate\View\Component;
-use Pys\Lottie\Facades\Lottie;
+use ADPC\Lottie\Facades\Lottie;
 
 class LottieComponent extends Component
 {

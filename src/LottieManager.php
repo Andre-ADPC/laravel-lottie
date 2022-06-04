@@ -1,11 +1,11 @@
 <?php
 
-namespace Pys\Lottie;
+namespace ADPC\Lottie;
 
 use Illuminate\Contracts\Filesystem\Filesystem;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Storage;
-use Pys\Lottie\Components\LottieComponent;
+use ADPC\Lottie\Components\LottieComponent;
 
 class LottieManager
 {

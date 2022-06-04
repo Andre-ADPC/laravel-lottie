@@ -1,6 +1,6 @@
 <?php
 
-namespace Pys\Lottie;
+namespace ADPC\Lottie;
 
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Blade;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Pys\Lottie\Facades;
+namespace ADPC\Lottie\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Facade;
  * @method  void registerComponent()
  * @method  string render(array $data)
  *
- * @see \Pys\Lottie\LottieManager
+ * @see \ADPC\Lottie\LottieManager
  */
 class Lottie extends Facade
 {

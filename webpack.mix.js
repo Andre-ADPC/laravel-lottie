@@ -1,4 +1,6 @@
-let mix = require('laravel-mix')
+/** @format */
+
+let mix = require("laravel-mix");
 
 /*
  |--------------------------------------------------------------------------
@@ -11,7 +13,4 @@ let mix = require('laravel-mix')
  |
  */
 
-mix
-    .js('resources/js/app.js', 'public')
-    .setPublicPath('public')
-    .version()
+mix.js("resources/js/app.js", "public").setPublicPath("public").version();

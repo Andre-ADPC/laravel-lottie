@@ -1,6 +1,6 @@
 <?php
 
-namespace Pys\Lottie\Console;
+namespace ADPC\Lottie\Console;
 
 use Illuminate\Console\Command;
 

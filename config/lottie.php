@@ -26,10 +26,10 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Laravel Blade Component Prefix
+    | Laravel Blade Component Prefix and Component Name
     |--------------------------------------------------------------------------
     |
-    | Your can custom the prefix any string you want. As long as on the prefix
+    | Your can customize the prefix into any string you want. As long as the prefix
     | matches the component name. For example "<x-atom/>", "<x-lottie-atom/>"
     | or "<x-yourPrefix-atom/>"
     |
@@ -50,7 +50,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Lottie Option
+    | Lottie Animation Configuration Options
     |--------------------------------------------------------------------------
     |
     | Based on lottie official document.
