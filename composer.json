@@ -43,5 +43,10 @@
         "Lottie": "ADPC\\Lottie\\Facades\\Lottie"
       }
     }
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "@php ./vendor/bin/testbench package:discover --ansi"
+    ]
   }
 }

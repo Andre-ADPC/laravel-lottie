@@ -1,5 +1,9 @@
 <!-- @format -->
 
+### Introduction | 简介
+
+# NOTE: this is still a work-in-progress | 注意：这仍然是一个正在进行的工作
+
 As the name suggests, laravel-lottie can make it easier for you to use [Lottie Animation JSON files](https://lottiefiles.com/), in Laravel Blade templates. It is also possible to use [Ali-Pay's emoji Animations](https://design.alipay.com/emotion).
 
 This package was forked from [Pys/1992](https://github.com/pys1992/laravel-blade-lottie) on Github and is being adapted for use with both Lottie-Web and Bodymovin, running on Laravel 9 and PHP 8.
@@ -12,7 +16,7 @@ It is still a work-in-progress, and this is my first attempt to create a Laravel
 
 ## Usage | 用法
 
-### Installing the package |安装包
+### Installing the package | 安装包
 
     composer require adpc/laravel-lottie
 
@@ -23,6 +27,21 @@ It is still a work-in-progress, and this is my first attempt to create a Laravel
 This operation will copy the configuration file to `config/lottie.php` and will also publish the required frontend files to `public/vendor/lottie`.
 
 这个操作会把配置文件复制为 `config/lottie.php`，还会把需要用到的前端文件发布到 `public/vendor/lottie`。
+
+### Opting-out of Package Discovery | 选择退出包发现
+
+If you would like to disable "package discovery" for this package, you may list the package name in the `extra` section of Your application's `composer.json` file in the ROOT of Your application before running `composer update`, as shown below. You can refer to [Laravel's Documentation](https://laravel.com/docs/9.x/packages#opting-out-of-package-discovery) to read more about managing the packages you use in the development of your applications.
+
+如果您想禁用此包的“包发现”，您可以在运行 `composer update` 之前，在应用程序的根目录中的 `composer.json` 文件的 `extra` 部分列出包名称，如图所示 以下。 您可以参考 [Laravel 的文档](https://laravel.com/docs/9.x/packages#opting-out-of-package-discovery) 了解更多关于应用程序开发中的包管理。
+
+    "extra": {
+    "laravel": {
+        "dont-discover": [
+            "adpc/laravel-lottie"
+        ]
+    }
+
+},
 
 ### Implementing app.js into the Blade File | 在 Blade 文件中实现 app.js
 
