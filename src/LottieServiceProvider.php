@@ -15,6 +15,7 @@ class LottieServiceProvider extends ServiceProvider
             $this->registerPublishing();
             $this->registerCommands();
         }
+        include __DIR__.'/routes.php';
     }
 
     public function register()
