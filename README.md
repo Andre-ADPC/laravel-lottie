@@ -4,6 +4,8 @@
 
 ### NOTE: this is still a work-in-progress | 注意：这仍然是一个正在进行的工作
 
+The package has not been published yet.
+
 As the name suggests, laravel-lottie can make it easier for you to use [Lottie Animation JSON files](https://lottiefiles.com/), in Laravel Blade templates. It is also possible to use [Ali-Pay's emoji Animations](https://design.alipay.com/emotion).
 
 This package was forked from [Pys/1992](https://github.com/pys1992/laravel-blade-lottie) on Github and is being adapted for use with both Lottie-Web and Bodymovin, running on Laravel 9 and PHP 8.
