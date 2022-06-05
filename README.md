@@ -1,8 +1,8 @@
 <!-- @format -->
 
-### Introduction | 简介
+## Introduction | 简介
 
-# NOTE: this is still a work-in-progress | 注意：这仍然是一个正在进行的工作
+### NOTE: this is still a work-in-progress | 注意：这仍然是一个正在进行的工作
 
 As the name suggests, laravel-lottie can make it easier for you to use [Lottie Animation JSON files](https://lottiefiles.com/), in Laravel Blade templates. It is also possible to use [Ali-Pay's emoji Animations](https://design.alipay.com/emotion).
 
