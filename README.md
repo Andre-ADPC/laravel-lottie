@@ -53,8 +53,6 @@ There is a test JSON from Pys/1992's repository available [here](https://raw.git
 
 After introducing `<x-lottie-hello/>` in `views/layouts/app.blade.php`, and opening your project in a browser, you should be able to see a GIF render of the JSON file:
 
-![](https://cdn.jsdelivr.net/gh/pys1992/storage@main/20210331110313.gif)
-
 在 `views/layouts/app.blade.php` 中引入 `<x-lottie-hello/>` 后，在浏览器中打开您的项目，您应该能够看到 JSON 文件的 GIF 渲染：
 
 ![](https://cdn.jsdelivr.net/gh/pys1992/storage@main/20210331110313.gif)
@@ -157,12 +155,12 @@ For example, you can customize the CSS class as follows:
 ## Custom non 'class' Attributes | 自定义非 'class' 属性
 
 If you need to conditionally compile classes on other HTML elements that shouldn't receive merged attributes, you can use the `@class` directive.
-The custom attribute will be added to the animation container. If the same attribute already exists, the original will be overwritten. Refer to [laravel documentation](https://laravel.com/docs/9.x/blade#non-class-attribute-merging).
+The custom attribute will be added to the animation container. If the same attribute already exists, the original will be overwritten. Refer to [Laravel documentation](https://laravel.com/docs/9.x/blade#non-class-attribute-merging).
 
 For example, you can customize the element with the `style` attribute:
 
 如果您需要有条件地编译不应接收合并属性的其他 HTML 元素上的类，您可以使用 `@class` 指令。
-自定属性的会被添加到动画容器上，如果已存在相同属性，则会把原来的覆盖，参考 [laravel 文档](https://laravel.com/docs/9.x/blade#non-class-attribute-merging)。
+自定属性的会被添加到动画容器上，如果已存在相同属性，则会把原来的覆盖，参考 [Laravel 文档](https://laravel.com/docs/9.x/blade#non-class-attribute-merging)。
 例如，您可以使用 `style` 属性自定义元素：
 
 ```html
