@@ -20,7 +20,7 @@ It is still a work-in-progress, and this is my first attempt to create a Laravel
 
 ### Installing the package | 安装包
 
-    composer require adpc/laravel-lottie
+    composer require pys/laravel-blade-lottie
 
 ### Publishing the Required Files | 发布必要文件
 
@@ -51,24 +51,9 @@ Add `<script src="{{ asset('vendor/lottie/app.js') }}" defer></script>` to the r
 
 在需要用到页面中添加 `<script src="{{ asset('vendor/lottie/app.js') }}" defer></script>`。但是通常来说，把它添加到 `views/layouts/app.blade.php` 中会比较方便。
 
-### Tips for Improved Performance | 提高性能的提示
+### 引入 lottie animation files
 
-• I recommend using the CDN pre-connect link because it has a fast connection response so that your script doesn’t affect the page load- speed too much.
-• Ideally, adding the script to the FOOTER section will prevent loading too early, but it depends on the use-case and UX page rendering requirements.
-• Pre-connect the library server in the HEAD for faster script loading:
-
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com/" crossorigin>
-
-• Next, prefetch the JSON animation files in HEAD for faster loading:
-
-    <link rel="preload" as="fetch" crossorigin="anonymous" type="application/json" href="/animation/your-animation.json">
-
-### Implementing a Lottie animation JSON data file into the Blade File | 在 Blade 文件中实现 Lottie 动画 JSON 数据文件
-
-The JSON files can be downloaded for free on the [lottie files](https://lottiefiles.com/) official website. To download a file, you need to register an account.
-There is a test JSON from Pys/1992's repository available [here](https://raw.githubusercontent.com/pys1992/storage/main/hello-lottie.json). Download and save or copy the content of the JSON file to ` storage/app/public/lottiefiles/hello.json`.
-
-有一个来自 Pys/1992 存储库的测试 JSON 可用 [这里](https://raw.githubusercontent.com/pys1992/storage/main/hello-lottie.json) 。 下载并保存或复制 JSON 文件的内容到 `storage/app/public/lottiefiles/hello.json` 。
+在 [lottie files](https://lottiefiles.com/) 官方网站上可以免费下载 json 文件。下载文件需要注册一个账号，我在[这里](https://raw.githubusercontent.com/pys1992/storage/main/hello-lottie.json)提供了一个测试用的 json，将其中的内容复制到 `storage/app/public/lottiefiles/hello.json`。
 
 ### Using the Package Components | 使用包组件
 
@@ -161,28 +146,21 @@ For example, if you want a click animation to stop, you can do so by calling `an
 <x-lottie-hello @click="animation.stop()" />
 ```
 
-## Custom CSS 'class' | 自定义 CSS 'class'
+## 自定义 class
 
-The custom CSS class can be appended to the animation container. Refer to the [Laravel Documentation](https://laravel.com/docs/9.x/blade#default-merged-attributes).
-For example, you can customize the CSS class as follows:
+自定 class 的会被追加到动画的容器上，参考 [laravel 文档](https://laravel.com/docs/8.x/blade#default-merged-attributes)。
 
-自定义 CSS 类可以附加到动画容器中，参考 [Laravel 文档](https://laravel.com/docs/9.x/blade#default-merged-attributes)。
-例如，您可以按如下方式自定义 CSS 类：
+例如，可以自定义 class：
 
 ```html
 <x-lottie-hello class="h-16 w-auto z-20" />
 ```
 
-## Custom non 'class' Attributes | 自定义非 'class' 属性
+## 自定义非 class 属性
 
-If you need to conditionally compile classes on other HTML elements that shouldn't receive merged attributes, you can use the `@class` directive.
-The custom attribute will be added to the animation container. If the same attribute already exists, the original will be overwritten. Refer to [Laravel documentation](https://laravel.com/docs/9.x/blade#non-class-attribute-merging).
+自定属性的会被添加到动画容器上，如果已存在相同属性，则会把原来的覆盖，参考 [laravel 文档](https://laravel.com/docs/8.x/blade#non-class-attribute-merging)。
 
-For example, you can customize the element with the `style` attribute:
-
-如果您需要有条件地编译不应接收合并属性的其他 HTML 元素上的类，您可以使用 `@class` 指令。
-自定属性的会被添加到动画容器上，如果已存在相同属性，则会把原来的覆盖，参考 [Laravel 文档](https://laravel.com/docs/9.x/blade#non-class-attribute-merging)。
-例如，您可以使用 `style` 属性自定义元素：
+例如，可以自定义 style：
 
 ```html
 <x-lottie-hello style="w-100px h-auto z-10 bg-gray-700 " />
@@ -191,5 +169,3 @@ For example, you can customize the element with the `style` attribute:
 ## About 'data_source' | 关于 'data_source'
 
 Support to configure `url` and content. If a `url` is selected, the browser will send a request to obtain JSON data, which means that the network overhead will be increased; and if content is selected, the JSON data will be rendered through the backend, appended to HTML , and sent to the frontend. If the JSON data is large, the HTML page code might also get quite large. This hasn't been tested, yet.
-
-支持配置 `url` 和内容。如果选择了 `url`，浏览器会发送请求获取 JSON 数据，这意味着网络开销会增加；如果选择了内容，JSON 数据将通过后端渲染，附加到 HTML，然后发送到前端。如果 JSON 数据很大，HTML 页面代码也可能会变得很大。这还没有经过测试。
